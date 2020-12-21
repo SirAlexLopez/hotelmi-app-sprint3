@@ -48,17 +48,9 @@ export default {
     BorrarReserva: function() {
       var datosJSON = {
         id: this.id,
-        quien_reserva: this.quien_reserva,
-        fecha_entrada: this.fecha_entrada,
-        fecha_salida: this.fecha_salida,
-        numero_noches: this.numero_noches,
-        tipo_habitacion: this.tipo_habitacion,
-        numero_personas: this.numero_personas,
-        numero_habitacion: this.numero_habitacion,
-        precio: this.precio
       };
       axios
-        .delete('https://hotelmintic.herokuapp.com/reserva/borrar/'+ {data:datosJSON})
+        .delete('https://hotelmintic.herokuapp.com/reserva/borrar/', {data:datosJSON})
         .then(respuesta => {
           alert(respuesta.data.mensaje);
         })
