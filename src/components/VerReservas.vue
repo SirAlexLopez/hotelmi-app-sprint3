@@ -9,8 +9,8 @@
         <th>fecha salida</th>
         <th>cantidad noches</th>
         <th>tipo hab</th>
-        <th>cant personas</th>
-        <th>num hab</th>
+        <th>habitacion</th>
+        <th>cantidad de personas</th>
         <th>valor</th>
       </tr>
       <tr v-for="reserve in reservas" v-bind:key="reserve.id">
@@ -39,7 +39,7 @@ export default {
   },
   beforeCreate: function() {
     axios
-      .get("https://hotelmintic.herokuapp.com/reservas/")
+      .get("http://127.0.0.1:8000/reservas/")
       .then(respuesta => {
         this.reservas = respuesta.data;
       })
