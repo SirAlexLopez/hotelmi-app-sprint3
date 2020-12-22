@@ -23,7 +23,7 @@ export default {
     },
     BorrarReserva: function() {
       axios
-        .delete('http://127.0.0.1:8000/reserva/borrar/'+this.id)
+        .delete('https://hotelmintic.herokuapp.com/reserva/borrar/'+this.id)
         .then(respuesta => {
           alert(respuesta.data.mensaje);
         })

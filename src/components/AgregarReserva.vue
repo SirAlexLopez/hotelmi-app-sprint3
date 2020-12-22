@@ -58,7 +58,7 @@ export default {
         precio: this.precio
       };
       axios
-        .post("http://127.0.0.1:8000/reserva/crear/", datosJSON)
+        .post("https://hotelmintic.herokuapp.com/reserva/crear/", datosJSON)
         .then(respuesta => {
           alert(respuesta.data.mensaje);
         })
